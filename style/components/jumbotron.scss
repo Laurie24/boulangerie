@@ -1,0 +1,163 @@
+.jumbotron {
+  border: 2px solid $black;
+  border-left: none;
+  border-right: none;
+
+  .container {
+    display: flex;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  .slogan {
+    display: flex;
+    padding: 8rem 0;
+    background: no-repeat;
+    background-position: right;
+    background-size: auto;
+    border-right: 2px solid $black;
+    width: 70%;
+
+    @include tablet {
+      width: 100%;
+      padding: 4rem 0 2rem 0;
+      flex-direction: column;
+      border-right: none;
+    }
+
+    p {
+      font-size: 6rem;
+      line-height: 6.5rem;
+      @include desktop {
+        font-size: 4.5rem;
+        line-height: 5rem;
+        margin-bottom: 6rem;
+      }
+      @include tablet {
+        font-size: 4rem;
+        line-height: 4.5rem;
+        margin-bottom: 5rem;
+      }
+      @include phone {
+        font-size: 3.2rem;
+        line-height: 3.5rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+      .ellipse {
+        width: 35rem;
+        margin-right: 3rem;
+        opacity: .8;
+        @include desktop {
+          width: 20rem;
+        }
+        @include tablet {
+          width: 50%;
+          margin-top: -17rem;
+        }
+        @include phone {
+          width: 50%;
+          margin-top: -10rem;
+        }
+
+
+
+
+      }
+      .img {
+        margin-top: -18rem;
+        margin-left: -18rem;
+        width: 30rem;
+        margin-right: 3rem;
+        border-radius: 2.5rem;
+        position: relative;
+        box-shadow: 5px 4px 18px 0 rgba(0,0,0,0.63);
+        @include tablet {
+          width: 60%;
+          margin: 0 0 0 auto;
+          margin-top: -2rem!important;
+        }
+        @include desktop {
+          margin-top: -5rem;
+        }
+      }
+    }
+  }
+
+  .star-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid $black;
+    padding: 8rem 0 0 0;
+    width: 30%;
+    @include tablet {
+      width: 100%;
+      padding: 4rem 0 0 0;
+      border-right: none;
+      flex-direction: column-reverse;
+    }
+    .product1 {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include tablet {
+        margin-bottom: 4rem;
+      }
+      .subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 1.4rem;
+        font-weight: 500;
+      }
+      p {
+        text-align: center;
+      }
+      img {
+        margin-bottom: 3.5rem;
+        width: 80%;
+        border-radius: 1rem;
+      }
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      border-top: 2px solid $black;
+      font-size: 2.8rem;
+      line-height: 3rem;
+      font-weight: 500;
+      padding: 2rem 0;
+
+      @include tablet {
+        font-size: 2.2rem;
+        padding: 3rem 0 2rem 0;
+      }
+
+      .mobile {
+        display: none;
+        @include tablet {
+          display: flex;
+        }
+      }
+
+      .desktop {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+
+  }
+}

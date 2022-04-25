@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'breakpoints';
+@import 'reset';
+@import "components/header";
+@import "components/footer";
+@import 'components/jumbotron';
+@import 'components/about';
+@import "components/products";
+@import "components/contact";
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+
+  @include phone() {
+    max-width: 90vw;
+  }
+  @include phone-up() {
+    max-width: $phone - (20px * 2);
+  }
+  @include tablet-up() {
+    max-width: $tablet - (30px * 2);
+  }
+  @include desktop-up() {
+    max-width: $desktop;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding: 13rem;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: $black;
+  background-color: $primary;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}

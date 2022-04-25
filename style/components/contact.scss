@@ -1,0 +1,51 @@
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 0;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &-text {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-title {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+  }
+
+  &-maps {
+    width: 100%;
+  }
+
+  &-date {
+    margin-bottom: 2rem;
+    p:first-child {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-localisation {
+    p:first-child {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: .6rem;
+      a {
+        color: $black;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

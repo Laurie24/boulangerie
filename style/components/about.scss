@@ -1,0 +1,91 @@
+.about {
+  display: flex;
+  padding: 8rem 0;
+  @include tablet {
+    flex-direction: column;
+    padding: 4rem 0;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    @include tablet {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px solid $black;
+    padding-right: 5rem;
+    height: 80%;
+
+    @include tablet {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+
+  &-title {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+  }
+
+  &-image {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding-left: 5rem;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 2.5rem;
+    }
+
+    @include tablet {
+      width: 100%;
+      padding-left: 0;
+      img {
+        border-radius: 1.5rem;
+      }
+    }
+  }
+
+  &-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
+
+  &-team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 1rem;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        font-size: 3rem;
+        margin-bottom: 1.6rem;
+      }
+
+      .legend {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+    }
+  }
+}

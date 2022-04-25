@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boulangerie Chavanon</title>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link href="index.css" rel="stylesheet">
+    <script type="module">
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            breakpoints: {
+                960: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    autoplay: {
+                        delay: 3000,
+                    },
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 3000,
+                    },
+                }
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+<header class="header container">
+    <img class="header__logo" alt="logo boulangerie Chavanon" src="assets/logo-simple.svg"/>
+    <ul class="header__menu">
+        <li>
+            <a href="#about">A propos</a>
+        </li>
+        <li>
+            <a href="#products">Nos produits</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+</header>
+<main>
+    <section class="jumbotron reveal" id="jumbotron">
+        <div class="container">
+            <div class="slogan">
+                <p>Pain frais tout <br> juste sorti du four...</p>
+                <div>
+                    <img class="ellipse" alt="" src="assets/ellipse.svg"/>
+                    <img class="img" alt="" src="assets/products/burger.jpg"/>
+                </div>
+            </div>
+            <div class="star-products">
+                <div class="product1">
+                    <img class="img" alt="" src="assets/products/cover.jpg"/>
+                    <p class="subtitle">La pétrisane 🥖</p>
+                    <p>Gourmande, légère et croustillante <br>
+                        Le secret ? <br>
+                        La pétrisane se distingue par sa croûte dorée et généreuse au croustillant incomparable, fruit d'une fermentation de plus de 16 heures, qui ravira tous les amateurs de pains artisanaux. <br>
+                        4 variétés : Nature, Graine,  Fibre ou Bio</p>
+                </div>
+                <div class="title">Notre produit star <span class="desktop">☝</span>️
+                    <span class="mobile">👇</span>️</div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about container reveal">
+        <div class="about-text">
+            <div class="about-container">
+                <div class="about-title">A propos</div>
+                <p class="about-description">
+                    La boulangerie a été créée dans les années 1800. Fabienne et Jérôme Chavanon ont repris cette boulangerie en 2002. <br> Depuis cette date, 23 apprentis ont été formé. C'est une boulangerie artisanale et familiale avec un chef d'entreprise passionné depuis son plus jeune âge.
+                </p>
+                <br>
+                <div class="about-subtitle">Notre équipe :</div>
+                <div class="about-team">
+                    <div class="item">
+                        <span>👨‍🍳</span>
+                        <p class="name">Jérôme Chavanon</p>
+                        <p class="legend">Le chef boulanger pâtissier</p>
+                    </div>
+                    <div class="item">
+                        <span>‍👩‍💼</span>
+                        <p class="name">Fabienne Chavanon</p>
+                        <p class="legend">La cheffe commerçante</p>
+                    </div>
+                    <div class="item">
+                        <span>🤵‍♀️</span>
+                        <p class="name">Magalie</p>
+                        <p class="legend">La super vendeuse</p>
+                    </div>
+                    <div class="item">
+                        <span>👨‍👨‍👧</span>
+                        <p class="legend">Accompagné d'apprentis <br> formés chaque année</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img alt="" src="assets/magasin.jpg">
+        </div>
+    </section>
+    <section id="products" class="products reveal">
+        <div class="products-title">
+            Nos produits 🧁
+        </div>
+        <div class="products-content container">
+            <div class="products-description">
+                <div class="menu">
+                    <p class="title">
+                        Nos pains<span>🥖</span>
+                    </p>
+                    <ul>
+                        <li>- pétrisane</li>
+                        <li>- flûte</li>
+                        <li>- baguette ordinaire</li>
+                        <li>- boule</li>
+                        <li>- florentin petit, moyen et grand</li>
+                        <li>- recuit</li>
+                        <li>- briard</li>
+                        <li>- complet</li>
+                        <li>- campagne</li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <p class="title">Nos pâtisseries <span>🍰</span></p>
+                    <ul>
+                        <li>- éclairs vanille, chocolat ou café</li>
+                        <li>- tartelette citron et citron meringuée</li>
+                        <li>- entremet</li>
+                        <li>- choux chantilly</li>
+                        <li>- tarte tatin</li>
+                        <li>- amandine</li>
+                        <li>- tartelette aux fruits ou aux pommes</li>
+                        <li>- charlotte chocolat, framboise ou poire</li>
+                        <li>- crumble aux pommes</li>
+                        <li>- merveilleux chocolat ou noix de coco</li>
+                        <li>- flan</li>
+                        <li>- mille-feuille</li>
+                        <li>- tarte aux fruits 4, 6 ou 8 personnes</li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <p class="title">Nos viennoiseries <span>🥐</span></p>
+                    <ul>
+                        <li>- pain aux chocolats</li>
+                        <li>- croissants</li>
+                        <li>- petri choc</li>
+                        <li>- chausson aux pommes</li>
+                        <li>- torsade</li>
+                        <li>- pain aux raisins</li>
+                        <li>- brioche nature ou aux pralines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="products-image">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_4567.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_4568.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_4570.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_4638.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_5463.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_5464.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_5465.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_5468.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_5471.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/cover.jpg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_4636.jpeg')"></div>
+                        <div class="swiper-slide" style="background-image: url('assets/products/IMG_4565.jpg')"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact container reveal">
+        <div class="contact-text">
+            <div class="contact-title">Nous contacter</div>
+            <div class="contact-date">
+                <p>Horaires :</p>
+                <p>Lundi, mardi, mercredi, vendredi et samedi: 6h à 19h.</p>
+            </div>
+            <div class="contact-localisation">
+                <p>Coordonnées :</p>
+                <p>📞  04 77 60 13 71</p>
+                <p>🏠  <a href="https://www.google.com/maps/place/17+Rue+des+Moulins,+42190+Charlieu,+France/@46.1574317,4.170193,17.93z/data=!4m5!3m4!1s0x47f3f5db863f9cfb:0xbecf6bc1f7f6c17f!8m2!3d46.1574152!4d4.170122?hl=en" target="_blank">17 rue des moulins 42190 Charlieu</a></p>
+                <p>📧  <a href="mailto:chavanon.jerome@sfr.fr">chavanon.jerome@sfr.fr</a></p>
+            </div>
+
+        </div>
+        <div class="contact-map">
+<!--            <div style="width: 100%"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=17%20Rue%20des%20Moulins,%2042190%20Charlieu+(My%20Business%20Name)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/marine-gps/">marine gps</a></iframe></div>-->
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="330" height="270" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=46.15760040283203,4.170215606689453&hl=es&z=14&amp;output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://123movies-to.org"></a><br>
+                    <style>.mapouter {
+                        position: relative;
+                        text-align: center;
+                        height: 250px;
+                        width: 330px;
+                    }</style>
+                    <a href="https://www.embedgooglemap.net">embed google map</a>
+                    <style>.gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 250px;
+                        width: 330px;
+                    }</style>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Site réalisé avec ❤️ par Laurie Villeneuve</p>
+</footer>
+</body>
+</html>
