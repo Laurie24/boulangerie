@@ -93,6 +93,9 @@ table {
 .header__menu > li a:hover {
   color: #380948;
 }
+.header .title {
+  display: none;
+}
 
 footer {
   background-color: #000000;
@@ -546,7 +549,7 @@ body {
 
 .reveal {
   position: relative;
-  transform: translateY(150px);
+  transform: translateY(80px);
   opacity: 0;
   transition: 1s all ease;
 }
